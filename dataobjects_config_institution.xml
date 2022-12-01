@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema/sunapsis/dataobjects.xsd">
+	<dataObject name="configTSAcademicLevelInsuranceLocation" label="Insurance Location" module="sunapsis">
+		<menu type="list">%levelCode% (%insuranceLocation%)</menu>
+		<description><![CDATA[
+			Specifies the 'location' used by Univiersities' Health Insurance.  All locations correspond to a different population of class standings
+		]]></description>
+		<primaryKey>recnum</primaryKey>
+		<foreignKey dataObject="configTSAcademicLevelInsurance" key="recnum"/>
+		<datums>
+			<datum key="levelCode" label="Academic Level" type="string" length="10" data="required" >
+				<reference dataObject="codeAcademicLevel" valueKey="code" displayKey="description"/>
+			</datum>
+			<datum key="insuranceLocation" label="Description" type="string" length="50" data="required"/>
+			<datum key="recnum" label=" " type="integer" display="false" />
+		</datums>
+		<constraints/>
+	</dataObject>
+</data>

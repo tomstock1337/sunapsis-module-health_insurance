@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><display xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema/sunapsis/display.xsd">
+	<individualDisplay>
+		<set label="Other Logged Information">
+			<dataObject reference="jbCustomFields3" view="multi" width="625" height="350"/>
+		</set>
+	</individualDisplay>
+	
+	<domCodeDisplay>
+	</domCodeDisplay>
+	<generalCodesDisplay>
+		<set label="TS Customizations | Health Insurance Configuration">
+			<dataObject reference="configTSAcademicLevelInsuranceLocation" view="multi" width="700" height="700"/>
+		</set>
+	</generalCodesDisplay>
+</display>

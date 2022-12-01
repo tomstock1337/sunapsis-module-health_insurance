@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema/sunapsis/dataobjects.xsd">
+	<dataObject name="viewTSHealthInsurance" label="View Health Insurance" module="sunapsis">
+		<menu/>
+		<description><![CDATA[
+			This is a list of health insurance information for each student.
+		]]></description>
+		<primaryKey/>
+		<foreignKey dataObject="jbInternational" key="idnumber"/>
+		<datums>
+			<datum key="idnumber" label=" " type="integer" display="false" />
+			<datum key="termApplied" label="Term Applied" type="string" >
+				<reference dataObject="viewCodeTerm" valueKey="code" displayKey="description"/>
+			</datum>
+			<datum key="companyName" label="Company Name" type="memo" />
+			<datum key="effectiveDateFormatted" label="Effective Date (yyymmdd)" type="string" length="30" />
+			<datum key="effectiveDate" label="Effective Date" type="memo" />
+			<datum key="endDateFormatted" label="End Date (yyymmdd)" type="string" length="30" />
+			<datum key="endDate" label="End Date" type="memo" />
+			<datum key="dobFormatted" label="Date of Birth (yyymmdd)" type="string" length="30" />
+			<datum key="dob" label="Date of Birth" type="date" />
+			<datum key="termCode" label="Term Code" type="memo" />
+			<datum key="planCode" label="Plan Code" type="memo" />
+			<datum key="classCode" label="Class Code" type="memo" />
+			<datum key="location" label="Location" type="memo" />
+			<datum key="groupCode" label="Group Code" type="memo" />
+			<datum key="notes" label="Policy / Notes" type="memo" />
+			<datum key="gender" label="Gender" type="memo" />
+			<datum key="updatedBy" label="Updated By" type="memo" />
+		</datums>
+		<constraints/>
+	</dataObject>                                          
+</data>

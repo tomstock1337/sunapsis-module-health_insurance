@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema/sunapsis/dataobjects.xsd">
+	<dataObject name="jbCustomFields4" label="Health Insurance" module="sunapsis">
+		<menu type="list">%customField1% (%customField2% - %customField3%)</menu>
+		<description><![CDATA[
+			This lists all health insurance records on file for the given student.
+		]]></description>
+		<primaryKey>recnum</primaryKey>
+		<foreignKey dataObject="jbInternational" key="idnumber"/>
+		<datums>
+			<datum key="customField10" label="Term Applied" type="string" >
+				<reference dataObject="viewCodeTSTerm" valueKey="code" displayKey="description"/>
+			</datum>
+			<datum key="customField1" label="Company Name" type="string" length="10" data="required"/>
+			<datum key="customField2" label="Effective Date" type="date" data="required" />
+			<datum key="customField3" label="End Date" type="date" data="required" />
+			<datum key="customField4" label="Term Code" type="string" />
+			<datum key="customField5" label="Plan Code" type="string" />
+			<datum key="customField8" label="Group Code" type="string" />
+			<datum key="customField6" label="Insurance Location" type="string" >
+				<reference dataObject="viewCodeTSAcademicLevel" valueKey="code" displayKey="description" />
+			</datum>
+			<datum key="customField9" label="Policy/Notes" type="memo" />
+			<datum key="customField7" label="Updated By" type="label" />
+			<datum key="datestamp" label="Last Updated" type="datestamp"/>
+			<datum key="recnum" label=" " type="integer"/>
+			<datum key="idnumber" label=" " type="integer"/>
+		</datums>
+		<constraints>
+			<constraint type="AssignUsernameConstraint" key="customField7"/>
+		</constraints>
+	</dataObject>
+</data>
